@@ -63,6 +63,111 @@ nav {
     color: white;
 }
 
+/* Pricing Section in Hero */
+.pricing-hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+}
+
+.pricing-tier {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px 20px;
+}
+
+.pricing-tier.premium {
+    border-color: #ff69b4;
+    background: rgba(255, 105, 180, 0.1);
+}
+
+.tier-title {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.premium .tier-title {
+    color: #ff69b4;
+}
+
+.tier-description {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.price-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.price-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff69b4;
+    transform: translateY(-2px);
+}
+
+.price-item.bundle {
+    border-color: #ff69b4;
+    background: rgba(255, 105, 180, 0.15);
+}
+
+.price-item .price {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff69b4;
+    margin-bottom: 5px;
+}
+
+.price-item .duration {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.price-item .savings {
+    display: block;
+    font-size: 12px;
+    color: #ff69b4;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .pricing-hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tier-title {
+        font-size: 20px;
+    }
+    
+    .price-item .price {
+        font-size: 24px;
+    }
+    
+    .price-item .duration {
+        font-size: 13px;
+    }
+}
+
 /* Responsive mobile menu */
 @media (max-width: 768px) {
     .nav-links {
